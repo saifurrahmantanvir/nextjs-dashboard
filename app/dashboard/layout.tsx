@@ -1,6 +1,8 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
 import { outfit } from '@/app/ui/fonts';
 
+export const experimental_ppr = true;
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${outfit.className} flex h-screen flex-col md:flex-row md:overflow-hidden`}>
