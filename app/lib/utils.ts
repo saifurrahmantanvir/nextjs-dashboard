@@ -7,6 +7,15 @@ export const formatCurrency = (amount: number) => {
   });
 };
 
+export const debounce = (func: any, timeout: number) => {
+  let timer: NodeJS.Timeout | undefined;
+
+  return (...args: any[]) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => func(...args), timeout)
+  }
+}
+
 export const formatDateToLocal = (
   dateStr: string,
   locale: string = 'en-US',
